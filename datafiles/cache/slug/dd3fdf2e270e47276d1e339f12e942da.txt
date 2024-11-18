@@ -1,1 +1,0 @@
-[{"id":"444","bang":"baiviet","slug":"kim-bang-dau-nhua-444","id_bang":"327","step":"2"}]

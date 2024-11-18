@@ -1,1 +1,0 @@
-[{"id":"170","bang":"baiviet","slug":"bio-plastic-clip-no-20","id_bang":"132","step":"2"}]

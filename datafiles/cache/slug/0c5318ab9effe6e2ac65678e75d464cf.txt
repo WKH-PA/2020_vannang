@@ -1,1 +1,0 @@
-[{"id":"330","bang":"baiviet","slug":"hook-for-socks-10-GREEN-PE","id_bang":"259","step":"2"}]

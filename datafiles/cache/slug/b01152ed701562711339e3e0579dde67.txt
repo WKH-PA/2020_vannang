@@ -1,1 +1,0 @@
-[{"id":"482","bang":"baiviet","slug":"san-pham-moi-day-treo-chi-vp-fas-ito-loop-va-recycle-vp-fas-ito-loop","id_bang":"355","step":"3"}]

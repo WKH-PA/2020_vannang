@@ -1,1 +1,0 @@
-[{"id":"466","bang":"baiviet","slug":"xu-huong-da-dang-hoa-va-so-hoa-nguon-cung-phu-lieu-cho-nganh-det-may-tai-viet-nam","id_bang":"342","step":"3"}]

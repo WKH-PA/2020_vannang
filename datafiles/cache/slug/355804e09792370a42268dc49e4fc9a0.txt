@@ -1,1 +1,0 @@
-[{"id":"491","bang":"baiviet","slug":"thu-moi-tham-du-trien-lam-quoc-te-lan-thu-21-ve-may-moc-thiet-bi-cong-nghiep-nganh-det-may-2023","id_bang":"363","step":"3"}]

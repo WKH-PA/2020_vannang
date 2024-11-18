@@ -1,1 +1,0 @@
-[{"id":"499","bang":"baiviet","slug":"recycle-vp-pin-s","id_bang":"371","step":"2"}]

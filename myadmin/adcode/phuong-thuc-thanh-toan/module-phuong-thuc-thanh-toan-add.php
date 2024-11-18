@@ -122,11 +122,11 @@
       </section>
       <section class="col-lg-12">
         <div class="box p10">
-          <div class="form-group">
-            <label for="exampleInputFile">Hình ảnh (<?=$loaibanner['rong'].'x'.$loaibanner['cao'].'px' ?>)</label>
-            <?=!empty($icon) ? $icon : '' ?>
-            <input name="icon" type="file" class="form-control" id="exampleInputFile">
-          </div>
+<!--          <div class="form-group">-->
+<!--            <label for="exampleInputFile">Hình ảnh (--><?//=$loaibanner['rong'].'x'.$loaibanner['cao'].'px' ?><!--)</label>-->
+<!--            --><?//=!empty($icon) ? $icon : '' ?>
+<!--            <input name="icon" type="file" class="form-control" id="exampleInputFile">-->
+<!--          </div>-->
           <div class="form-group">
             <label>Số thứ tự</label>
             <input type="text" class="form-control" name="catasort" id="catasort" value="<?=SHOW_text($catasort)?>" onkeyup="SetCurrency(this)">

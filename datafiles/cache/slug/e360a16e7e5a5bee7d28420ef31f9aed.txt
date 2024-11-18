@@ -1,1 +1,0 @@
-[{"id":"284","bang":"baiviet","slug":"kim-n-l","id_bang":"216","step":"2"}]

@@ -1,1 +1,0 @@
-[{"id":"508","bang":"baiviet","slug":"vp-fas-loop-nylon","id_bang":"374","step":"2"}]

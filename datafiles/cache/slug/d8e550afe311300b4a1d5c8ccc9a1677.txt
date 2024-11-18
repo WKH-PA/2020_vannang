@@ -1,1 +1,0 @@
-[{"id":"300","bang":"baiviet","slug":"hanger-nh-124-nhua-mapka-reborn-giay-tai-che","id_bang":"231","step":"2"}]

@@ -1,1 +1,0 @@
-[{"id":"358","bang":"danhmuc","slug":"rice-resin","id_bang":"79","step":"2"}]

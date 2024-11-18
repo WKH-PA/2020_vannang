@@ -1,1 +1,0 @@
-[{"id":"488","bang":"baiviet","slug":"bb-loop-cotton-rice-resin","id_bang":"360","step":"2"}]

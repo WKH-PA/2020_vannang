@@ -1,1 +1,0 @@
-[{"id":"428","bang":"danhmuc","slug":"nut-ao-bang-chat-lieu-giay","id_bang":"101","step":"2"}]

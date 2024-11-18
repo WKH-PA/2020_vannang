@@ -1,1 +1,0 @@
-[{"id":"392","bang":"baiviet","slug":"hanger-h49-rice-resin","id_bang":"302","step":"2"}]

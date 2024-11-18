@@ -1,1 +1,0 @@
-[{"id":"288","bang":"baiviet","slug":"kim-vp-tool-pro-s","id_bang":"219","step":"2"}]

@@ -1,1 +1,0 @@
-[{"id":"551","bang":"baiviet","slug":"van-nang-banok-se-tham-du-trien-lam-may-moc-thiet-bi-cong-nghiep-nganh-det-may-lan-thu-22-vtg-2024","id_bang":"407","step":"3"}]

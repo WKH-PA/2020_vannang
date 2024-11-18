@@ -1,1 +1,0 @@
-[{"id":"533","bang":"baiviet","slug":"nut-chan-day-rut-tu-ba-ca-phe-hinh-tron","id_bang":"391","step":"2"}]

@@ -1,1 +1,0 @@
-[{"id":"182","bang":"baiviet","slug":"plastic-clip-m","id_bang":"144","step":"2"}]

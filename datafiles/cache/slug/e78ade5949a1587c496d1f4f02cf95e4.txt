@@ -1,1 +1,0 @@
-[{"id":"39","bang":"baiviet","slug":"day-treo-ito-lox-39","id_bang":"26","step":"2"}]
