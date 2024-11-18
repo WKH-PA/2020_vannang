@@ -57,3 +57,10 @@
     }
   }
 }
+
+@media only screen and (max-width: 1199px) {
+  .right_header ul .cart span {
+    top: -9px;
+    padding: 10px;
+  }
+}
