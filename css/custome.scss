@@ -27,26 +27,29 @@
     }
   }
 }
-.product-item{
+
+.product-item {
   .price {
     display: flex;
     align-items: center;
     color: red;
     margin-top: 15px;
     //float: left;
-    .promo{
+    .promo {
       margin-left: 15px;
       color: #8b8383;
       text-decoration: line-through;
     }
   }
 }
+
 .pro_id {
   ul {
-    li{
+    li {
       margin-bottom: 10px;
     }
-    h3{
+
+    h3 {
       -webkit-line-clamp: 2;
       line-height: 25px;
       min-height: 50px;
@@ -55,6 +58,23 @@
       -webkit-box-orient: vertical;
       padding: 0;
     }
+  }
+}
+
+.clor_01 {
+  cursor: pointer;
+}
+
+.quantity {
+  .minus, .plus {
+    position: initial;
+    width: 30px;
+    height: 30px;
+  }
+
+  .input-text {
+    width: 30px;
+    height: 30px;
   }
 }
 
