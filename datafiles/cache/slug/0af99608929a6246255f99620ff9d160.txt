@@ -1,0 +1,1 @@
+[{"id":"493","bang":"baiviet","slug":"daay-treo-nhan-bang-nhua-voi-nhieu-mau-sac-vp-loop-va-recycle-vp-loop-san-xuat-tai-viet-nam","id_bang":"365","step":"3"}]

@@ -1,0 +1,1 @@
+[{"id":"30","id_parent":"22","icon":"1592444169_503s2.png","tenbaiviet_vi":null,"tenbaiviet_en":null,"sort":"1","duongdantin":"datafiles","the_loai":"0"},{"id":"86","id_parent":"22","icon":"1592967155_503s1--Copy.png","tenbaiviet_vi":null,"tenbaiviet_en":null,"sort":"2","duongdantin":"datafiles","the_loai":"0"}]

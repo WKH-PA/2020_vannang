@@ -1,0 +1,1 @@
+[{"id":"35","id_parent":"17","icon":"1592447852_fas-banok-2.png","tenbaiviet_vi":null,"tenbaiviet_en":null,"sort":"0","duongdantin":"datafiles","the_loai":"0"},{"id":"266","id_parent":"17","icon":"1617848274_U11e1d2aeabfa41128a337a71b52b3931Z.jpg","tenbaiviet_vi":null,"tenbaiviet_en":null,"sort":"1","duongdantin":"datafiles","the_loai":"0"}]

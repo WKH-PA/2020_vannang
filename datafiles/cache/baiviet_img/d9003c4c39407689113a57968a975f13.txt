@@ -1,0 +1,1 @@
+[{"id":"561","id_parent":"292","icon":"1661841214_rice-resin-HFH-8-4.JPG","tenbaiviet_vi":null,"tenbaiviet_en":null,"sort":"0","duongdantin":"datafiles","the_loai":"0"},{"id":"562","id_parent":"292","icon":"1661841215_Rice-resin-HFH-8-5.JPG","tenbaiviet_vi":null,"tenbaiviet_en":null,"sort":"1","duongdantin":"datafiles","the_loai":"0"}]

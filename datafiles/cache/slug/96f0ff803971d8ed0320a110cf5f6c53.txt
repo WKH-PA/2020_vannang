@@ -1,0 +1,1 @@
+[{"id":"459","bang":"baiviet","slug":"saigonfabric-2023-summer-\u2013-trien-lam-quoc-te-nganh-cong-nghiep-det-may-nguyen-phu-lieu-vai-\u2013-thiet-bi","id_bang":"337","step":"3"}]
