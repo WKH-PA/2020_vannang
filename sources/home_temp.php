@@ -21,4 +21,9 @@ $pricePromo = !empty($rows['giakm']) ? $rows['giakm'] : 0;
             } ?>
         </div>
     </a>
+    <?php if (!empty($price)) { ?>
+        <div onclick="add_cart(<?= $rows['id'] ?>)" class="btn_buy">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i><?=$glo_lang['them_vao_gio_hang']?>
+        </div>
+    <?php } ?>
 </ul>

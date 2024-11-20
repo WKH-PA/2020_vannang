@@ -116,4 +116,4 @@ if (isset($_GET['login']) && $_GET['login'] == "google") {
 $_SESSION['token'] = md5(RANDOM_chuoi(5));
 
 //ob_start("sanitize_output");
-$numberCart = getTotalItemCart();
+$numberCart = getTotalItem();

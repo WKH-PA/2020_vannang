@@ -2792,12 +2792,20 @@ function glo_lang_admin($text)
  * Tổng sản phẩm trong giỏ hàng
  * @return int
  */
-function getTotalItemCart()
+
+function getTotalItem()
 {
+    $numberCart = 0;
     try {
-        return 0;
+        if (empty($_SESSION['cart'])) {
+            throw new Exception("Không tồn tại sản phẩm trong giỏ hàng", 404);
+        }
+        foreach ($_SESSION['cart'] as $item) {
+            $numberCart += $item;
+        }
+        return $numberCart;
     } catch (Exception $ex) {
-        return 0;
+        return $numberCart;
     }
 }
 

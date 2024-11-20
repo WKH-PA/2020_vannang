@@ -35,10 +35,9 @@
     <div class="clr"></div>
     <div class="right_header">
         <ul>
-            <div class="cart">
-                <span><?= $numberCart ?></span>
-                <a href="<?= $full_url . '/gio-hang/' ?>"><i class="fa fa-shopping-cart"></i> <?=$glo_lang['gio_hang']?></a>
-            </div>
+            <li class="cart"><a href="<?=$full_url.'/gio-hang'?>">
+                    <i class="fa fa-shopping-cart"
+                       aria-hidden="true"></i><span><?= $numberCart ?></span></a></li>
             <li>
                 <a class="cur"
                    onclick="if(!$('.timkiem_top').hasClass('acti')) $('.timkiem_top').addClass('acti'); else $('.timkiem_top').removeClass('acti')"><i

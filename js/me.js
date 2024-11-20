@@ -512,9 +512,10 @@ function CHECK_send_lienhe(url, id_form, cls) {
 }
 function updateQty_notthis(url, id) {
     var qty = $("#product-quantity-"+id).val();
+    console.log(qty);
     if (qty == '' || qty <= 0 || isNaN(qty) || !Number.isSafeInteger(parseFloat(qty))) {
-        alert($(".cls_datafalse").val());
-        window.location.reload();
+        $("#product-quantity-"+id).val(1);
+        // window.location.reload();
     }
     else {
         $.ajax({
@@ -529,8 +530,8 @@ function updateQty_notthis(url, id) {
                     else {
                         try {
                             var js_de = JSON.parse(data);
-                            $(".td_thanhtien_" + id).html(js_de.thanhtien);
-                            $(".tb_tongtien").html(js_de.tongtien);
+                            $(".td_thanhtien_" + id).html(js_de.thanhtien+"đ");
+                            $(".price").html(js_de.tongtien);
                         } catch (e) {
                             console.log(data);
                         }
@@ -562,7 +563,7 @@ function updateQty(url, id, obj) {
                         try {
                             var js_de = JSON.parse(data);
                             $(".td_thanhtien_" + id).html(js_de.thanhtien);
-                            $(".tb_tongtien").html(js_de.tongtien);
+                            $(".price").html(js_de.tongtien);
                         } catch (e) {
                             console.log(data);
                         }

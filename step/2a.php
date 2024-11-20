@@ -218,25 +218,26 @@ $list_hinhcon = LAY_hinhanhcon($arr_running['id'], 50);
                                 <div class="clr"></div>
                             </div>
                         <?php }
-                    } ?>
-                    <label><?= $glo_lang['so_luong'] ?>:</label>
-                    <div class="quantity">
-                        <input type="button" class="minus" value="-">
-                        <input class="input-text qty text" title="Qty" size="4" value="1" name="qty_cart"
-                               id="quantity" max="50" min="1" step="1">
-                        <input type="button" class="plus" value="+">
-                    </div>
-                    <div class="ct_add">
-                        <ul>
-                            <?php
-                            $splienhe = LAY_step(6, 1);
-                            ?>
-                            <h3><a onclick="$('#orderform').submit()" class="clor_01"><?= $glo_lang['dat_hang'] ?></a></h3>
-                            <h3><a <?= full_href($thongtin_step) ?>
-                                        class="clor_03"><?= $glo_lang['xem_tiep_san_pham'] ?></a></h3>
-                            <div class="clr"></div>
-                        </ul>
-                    </div>
+                    }
+                    if (!empty($arr_running['giatien'])) {
+                        ?>
+                        <div class="ct_add">
+                            <ul>
+                                <div class="so-luong-mua">
+                                    <input class="number-down" value="-"/>
+                                    <input type="text" id="number" value="1" name="qty_cart">
+                                    <input class="number-up" value="+"/>
+                                </div>
+
+                                <h3><a onclick="add_cart_detail(<?= $arr_running['id'] ?>)" class="clor_03"><i
+                                                class="fa fa-shopping-cart"
+                                                aria-hidden="true"></i> <?= $glo_lang['them_vao_gio_hang'] ?></a></h3>
+                                <h3><a onclick="$('#orderform').submit()"
+                                       class="clor_01"><?= $glo_lang['dat_mua_ngay'] ?></a></h3>
+                                <div class="clr"></div>
+                            </ul>
+                        </div>
+                    <?php } ?>
                 </form>
 
                 <div class="clr"></div>
@@ -288,3 +289,24 @@ $list_hinhcon = LAY_hinhanhcon($arr_running['id'], 50);
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+        $(".number-down").click(function () {
+            var number = $("#number").val();
+            if (number <= 1 || isNaN(number)) {
+                $("#number").val(1);
+            } else {
+                $("#number").val(number - 1);
+            }
+        });
+
+        $(".number-up").click(function () {
+            var number = $("#number").val();
+            if (isNaN(number)) {
+                $("#number").val(1);
+            } else {
+                $("#number").val((parseInt(number) + 1));
+            }
+        });
+    });
+</script>
