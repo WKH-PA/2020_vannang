@@ -427,6 +427,7 @@ table.total-line-table td:last-child {
   margin-bottom: 20px;
   line-height: 18px;
 }
+
 .dv-gr-vanchuyen.dv-gr-thanhtoan label {
   float: left;
   width: 100%;
@@ -476,9 +477,9 @@ input.lb_ghdck:checked:after, .input_style_1:checked:after {
   transform: scale(1);
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(opacity = 100);
+  filter: alpha(opacity=100);
   background-image: url(/images/checkbox-tick-0.svg), none;
-  filter: alpha(opacity = 100);
+  filter: alpha(opacity=100);
   content: "";
   display: block;
   position: absolute;
@@ -511,7 +512,7 @@ input.lb_ghdck:checked:after, .input_style_1:checked:after {
   margin-top: 20px;
 }
 
-.sidebar .method-button-cart>a {
+.sidebar .method-button-cart > a {
   margin: 0;
 }
 
@@ -524,6 +525,7 @@ input.lb_ghdck:checked:after, .input_style_1:checked:after {
   float: right;
   margin: 0;
 }
+
 .sc_item_button {
   margin-top: 20px;
   text-align: center;
@@ -554,6 +556,28 @@ input.lb_ghdck:checked:after, .input_style_1:checked:after {
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 15px;
+}
+
+#chitiet_news tr:hover {
+  background-color: initial;
+}
+.field__input{
+  height: 120px !important;
+}
+
+.formBox {
+  li {
+    input, textarea, select {
+      border: solid 1px #ccc;
+      height: 45px;
+      color: #999;
+      padding: 10px;
+      font-size: 14px;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif, Roboto Condensed;
+      width: 100%;
+    }
+  }
 }
 
 @media only screen and (max-width: 1199px) {

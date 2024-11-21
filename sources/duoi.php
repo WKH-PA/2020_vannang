@@ -31,6 +31,7 @@
         var total = parseInt($("#number").val());
         add_cart(itemid, total)
     }
+
     function add_cart(itemid, total = 1) {
         $.ajax({
             url: '<?=$full_url . "/gio-hang/"?>', // URL đích
@@ -51,6 +52,32 @@
         });
         alert("<?=$glo_lang['add_cart_success']?>")
     }
+
+    document.querySelectorAll('.input_style_1').forEach(input => {
+        input.addEventListener('click', function () {
+            // Bỏ thuộc tính checked khỏi tất cả các input khác
+            document.querySelectorAll('.input_style_1').forEach(otherInput => {
+                otherInput.removeAttribute('checked');
+            });
+
+            // Thêm thuộc tính checked cho input hiện tại
+            this.setAttribute('checked', 'checked');
+
+            // Lấy giá trị của input hiện tại
+            const value = this.value;
+
+            // Hiển thị phần tử cls_ndtt tương ứng và ẩn những phần còn lại
+            document.querySelectorAll('.cls_ndtt').forEach(div => {
+                if (div.classList.contains(`cls_ndtt_${value}`)) {
+                    div.style.display = 'block';
+                    $("#type_payment").val(value);
+                } else {
+                    div.style.display = 'none';
+                }
+            });
+        });
+    });
+    $(".input_style_1").trigger("click");
 </script>
 </body>
 </html>

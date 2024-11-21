@@ -2809,4 +2809,40 @@ function getTotalItem()
     }
 }
 
+function getProvince()
+{
+    try {
+        $dataProvince = DB_fet("Id,Name", "#_location_provinces", "", "`Type` ASC", "", "arr");
+        return $dataProvince;
+    } catch (Exception $ex) {
+        return [];
+    }
+}
+
+function getDistrict($provinceId = 0)
+{
+    try {
+        if (empty($provinceId)) {
+            throw new Exception("Không tồn tại province ID", 404);
+        }
+        $dataDistricts = DB_fet("Id,Name", "#_location_districts", "ProvinceId=$provinceId", "`Type` ASC", "", "arr");
+        return $dataDistricts;
+    } catch (Exception $ex) {
+        return [];
+    }
+}
+
+function getWard($districtId = 0)
+{
+    try {
+        if (empty($districtId)) {
+            throw new Exception("Không tồn tại province ID", 404);
+        }
+        $dataWard = DB_fet("Id,Name", "#_location_wards", "DistrictId=$districtId", "`Type` ASC", "", "arr");
+        return $dataWard;
+    } catch (Exception $ex) {
+        return [];
+    }
+}
+
 ?>

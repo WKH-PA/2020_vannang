@@ -1204,7 +1204,6 @@ if ($motty == 'update-qty') {
         $sanpham = DB_que("SELECT * FROM `#_baiviet` WHERE `id` = '" . $id_sp . "' LIMIT 1");
         $sanpham = DB_arr($sanpham, 1);
         $dongia = check_gia_sql($id_sp, @$_SESSION['tinhnang'][$id_sp], $sanpham['giatien']);
-
         $tongtien += $dongia * $value;;
     }
 
@@ -1381,6 +1380,16 @@ if ($motty == 'dang-xuat') {
     unset($_SESSION['id']);
     LOCATION_js($full_url);
     exit();
+}
+
+if ($motty == 'get-district') {
+    echo json_encode(getDistrict($_POST['province_id']), 256);
+    exit;
+}
+
+if ($motty == 'get-ward') {
+    echo json_encode(getWard($_POST['district_id']), 256);
+    exit;
 }
 
 
