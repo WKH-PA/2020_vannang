@@ -128,10 +128,8 @@ $thongtin_step = LAY_anhstep_now(LAY_id_step(1));
                     </li>
                     <div class="clr"></div>
                     <div>
-                        <div class="left">
-                            <p class="require_pc"
-                               style="color:red;"><?= $glo_lang['thong_tin_bat_buoc'] ?></p>
-                        </div>
+                        <p class="require_pc"
+                           style="color:red;"><?= $glo_lang['thong_tin_bat_buoc'] ?></p>
                         <div class="clr"></div>
                     </div>
                 </div>
@@ -147,7 +145,7 @@ $thongtin_step = LAY_anhstep_now(LAY_id_step(1));
                     <div id="order-summary" class="order-summary order-summary--is-collapsed">
                         <div class="order-summary__sections">
                             <div class="discount-code" id="discountCode">
-                                <div class="order-summary__section order-summary__section--total-lines order-summary--collapse-element">
+                                <div class="order-summary__section order-summary__section--total-lines order-summary--collapse-element table-container">
                                     <table class="total-line-table">
                                         <tbody class="total-line-table__tbody">
                                         <?php
@@ -322,7 +320,7 @@ $thongtin_step = LAY_anhstep_now(LAY_id_step(1));
 
                 // Thêm các phần tử <option> mới vào district
                 $(response).each(function (index, element) {
-                    ward.append("<option value='" + element.Id + "'>" + element.Name + "</option>");
+                    ward.append("<option value='" + element.Name + "'>" + element.Name + "</option>");
                 });
             },
             error: function (xhr, status, error) {

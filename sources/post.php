@@ -845,8 +845,19 @@ if ($motty == "send_form" && isset($_POST['gui_donhang'])) {
         $s_email = isset($_POST['s_email']) ? $_POST['s_email'] : "";
         $s_email_s = base64_encode($glo_lang['email']);
 
-        $s_address = isset($_POST['s_address']) ? $_POST['s_address'] : "";
+        /**
+         * Xử lý nối tỉnh thành quận huyện vào địa chỉ
+         */
+
+        $dataAddress = [
+            $_POST['ward'],
+            $_POST['district'],
+            $_POST['city'],
+        ];
+
+        $s_address = isset($_POST['s_address']) ? $_POST['s_address'] . " " . implode(", ", $dataAddress) : "";
         $s_address_s = base64_encode($glo_lang['dia_chi']);
+
 
         $s_message = isset($_POST['s_message']) ? $_POST['s_message'] : "";
         $s_message_s = base64_encode($glo_lang['noi_dung']);

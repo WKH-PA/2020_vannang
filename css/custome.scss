@@ -431,8 +431,9 @@ table.total-line-table td:last-child {
 .dv-gr-vanchuyen.dv-gr-thanhtoan label {
   float: left;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-transform: uppercase;
+  line-height: 25px;
 }
 
 .radio__input {
@@ -561,7 +562,8 @@ input.lb_ghdck:checked:after, .input_style_1:checked:after {
 #chitiet_news tr:hover {
   background-color: initial;
 }
-.field__input{
+
+.field__input {
   height: 120px !important;
 }
 
@@ -580,9 +582,51 @@ input.lb_ghdck:checked:after, .input_style_1:checked:after {
   }
 }
 
+.product-item {
+  i {
+    margin-right: 5px;
+  }
+}
+
 @media only screen and (max-width: 1199px) {
   .right_header ul .cart span {
     top: -9px;
-    padding: 10px;
+    //padding: 10px;
+  }
+  .page_conten_page {
+    padding: 20px 15px;
+  }
+  .block-total-left, .block-total-cart {
+    width: 100%;
+  }
+  .qty.c-th-sluong {
+    width: 175px !important;
+  }
+  .table-container {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 500px; /* Optional: Ensures the table doesn't shrink too much */
+    }
+  }
+  #chitiet_news, #placeSlide_main .sidebar {
+    width: 50%;
+  }
+  #placeSlide_main .sidebar {
+    padding-left: 15px;
+  }
+  #chitiet_news {
+    padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #chitiet_news, #placeSlide_main .sidebar {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 15px;
+    border-left: 0;
   }
 }
