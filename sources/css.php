@@ -1,5 +1,5 @@
 <link href="css/style.css?v=<?=time() ?>" rel="stylesheet" type="text/css" />
-<link href="css/custome.css?v=<?=time() ?>" rel="stylesheet" type="text/css" />
+<link href="css/custome.min.css?v=<?=time() ?>" rel="stylesheet" type="text/css" />
 <!-- <link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
 <link href="css/shake.css" rel="stylesheet" type="text/css">
 <link href="css/widget.css" rel="stylesheet" type="text/css" />
