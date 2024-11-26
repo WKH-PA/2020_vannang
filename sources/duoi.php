@@ -32,6 +32,13 @@
         add_cart(itemid, total)
     }
 
+    $("#number").change(function(){
+        var dataNumber = parseInt($(this).val());
+        if(dataNumber===0 || isNaN(dataNumber)){
+            $(this).val(1);
+        }
+    })
+
     function add_cart(itemid, total = 1) {
         $.ajax({
             url: '<?=$full_url . "/gio-hang/"?>', // URL đích
