@@ -1,8 +1,14 @@
 <?php
 
+if (!isset($_SESSION['cart']) && empty($_POST['result'])) {
+    LOCATION_js($full_url . "/");
+}
 if (isset($_POST['xoa_sp'])) {
     if (isset($_SESSION['cart'][$_POST['id_die']])) unset($_SESSION['cart'][$_POST['id_die']]);
     if (count($_SESSION['cart']) == 0) unset($_SESSION['cart']);
+    if (empty($_SESSION['cart'])) {
+        LOCATION_js($full_url . "/");
+    }
 }
 
 if (isset($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] > 0) {
@@ -26,9 +32,9 @@ if (isset($_POST['id'])) {
     $_SESSION['tinhnang'][$id . "_" . md5($tinhnang)] = $tinhnang;
 
     if (isset($_POST['qty_cart']) && is_numeric($_POST['qty_cart']) && $_POST['qty_cart'] > 0) {
-        if(!empty($_SESSION['cart'][$id])){
+        if (!empty($_SESSION['cart'][$id])) {
             $_SESSION['cart'][$id] += $_POST['qty_cart'];
-        }else{
+        } else {
             $_SESSION['cart'][$id] = $_POST['qty_cart'];
         }
 

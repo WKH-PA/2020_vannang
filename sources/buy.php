@@ -58,6 +58,8 @@ $thongtin_step = LAY_anhstep_now(LAY_id_step(1));
                                onFocus="if (this.value == '<?= $glo_lang['ho_va_ten'] ?> (*)'){this.value='';}"
                                onBlur="if (this.value == '') {this.value='<?= $glo_lang['ho_va_ten'] ?> (*)';}"
                                data-name="<?= $glo_lang['ho_va_ten'] ?> (*)"
+                               data-validate-name="1"
+                               data-validate-name1="<?= "tên không hợp lệ" ?>"
                                data-msso="<?= $glo_lang['nhap_ho_ten'] ?>"/>
                     </li>
                     <li>
@@ -95,7 +97,7 @@ $thongtin_step = LAY_anhstep_now(LAY_id_step(1));
                                onFocus="if (this.value == '<?= $glo_lang['dia_chi'] ?>'){this.value='';}"
                                data-name="<?= $glo_lang['dia_chi'] ?> (*)"
                                data-msso="<?= $glo_lang['nhap_dia_chi'] ?>"
-                               onBlur="if (this.value == '') {this.value='<?= $glo_lang['dia_chi'] ?>';}"/>
+                               onBlur="if (this.value == '') {this.value='<?= $glo_lang['dia_chi'] ?>(*)';}"/>
                     </li>
                     <li>
                         <select data-rong="1" data-msso="<?= $glo_lang['chon_tinh_tp'] ?>" name="city" id="city" class="cityowner cls_data_check_form" >
