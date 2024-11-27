@@ -638,7 +638,7 @@ function CHECK_phone(cls) {
     phone = phone.replace(/ /g, '');
     if (phone != '') {
         var firstNumber = phone.substring(0, 2);
-        if ((firstNumber == '09' || firstNumber == '08') && phone.length == 10) {
+        if ((firstNumber == '09' || firstNumber == '08' || firstNumber == '03' || firstNumber == '07' || firstNumber == '05') && phone.length == 10) {
             if (phone.match(/^\d{10}/)) {
                 flag = true;
             }
