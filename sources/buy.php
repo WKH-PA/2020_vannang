@@ -55,11 +55,8 @@ $thongtin_step = LAY_anhstep_now(LAY_id_step(1));
                                id="s_fullname" type="text"
                                placeholder="<?= $glo_lang['ho_va_ten'] ?> (*)"
                                value="<?= !empty($_POST['s_fullname']) ? $_POST['s_fullname'] : @$hoten ?>"
-                               onFocus="if (this.value == '<?= $glo_lang['ho_va_ten'] ?> (*)'){this.value='';}"
-                               onBlur="if (this.value == '') {this.value='<?= $glo_lang['ho_va_ten'] ?> (*)';}"
-                               data-name="<?= $glo_lang['ho_va_ten'] ?> (*)"
                                data-validate-name="1"
-                               data-validate-name1="<?= "tên không hợp lệ" ?>"
+                               data-validate-name1="<?=$glo_lang['name_invalid'] ?>"
                                data-msso="<?= $glo_lang['nhap_ho_ten'] ?>"/>
                     </li>
                     <li>
@@ -69,8 +66,6 @@ $thongtin_step = LAY_anhstep_now(LAY_id_step(1));
                                name="s_dienthoai" id="s_dienthoai" type="text"
                                placeholder="<?= $glo_lang['so_dien_thoai'] ?> (*)"
                                value="<?= !empty($_POST['s_dienthoai']) ? $_POST['s_dienthoai'] : @$sodienthoai ?>"
-                               onFocus="if (this.value == '<?= $glo_lang['so_dien_thoai'] ?> (*)'){this.value='';}"
-                               onBlur="if (this.value == '') {this.value='<?= $glo_lang['so_dien_thoai'] ?> (*)';}"
                                data-name="<?= $glo_lang['so_dien_thoai'] ?> (*)"
                                data-msso="<?= $glo_lang['nhap_so_dien_thoai'] ?>"
                                data-msso1="<?= $glo_lang['so_dien_thoai_khong_hop_le'] ?>"/>
@@ -81,8 +76,6 @@ $thongtin_step = LAY_anhstep_now(LAY_id_step(1));
                         <input class="cls_data_check_form" data-rong="1" data-email="1" name="s_email" id="s_email" type="text"
                                placeholder="<?= $glo_lang['email'] ?> (*)"
                                value="<?= !empty($_POST['s_email']) ? $_POST['s_email'] : @$email ?>"
-                               onFocus="if (this.value == '<?= $glo_lang['email'] ?> (*)'){this.value='';}"
-                               onBlur="if (this.value == '') {this.value='<?= $glo_lang['email'] ?> (*)';}"
                                data-msso="<?= $glo_lang['chua_nhap_dia_chi_email'] ?>"
                                data-msso1="<?= $glo_lang['dia_chi_email_khong_hop_le'] ?>"/>
                     </li>
@@ -94,10 +87,12 @@ $thongtin_step = LAY_anhstep_now(LAY_id_step(1));
                                class="cls_data_check_form" data-rong="1"
                                placeholder="<?= $glo_lang['dia_chi'] ?> (*)"
                                value="<?= !empty($_POST['s_address']) ? $_POST['s_address'] : @$diachi ?>"
-                               onFocus="if (this.value == '<?= $glo_lang['dia_chi'] ?>'){this.value='';}"
                                data-name="<?= $glo_lang['dia_chi'] ?> (*)"
                                data-msso="<?= $glo_lang['nhap_dia_chi'] ?>"
-                               onBlur="if (this.value == '') {this.value='<?= $glo_lang['dia_chi'] ?>(*)';}"/>
+                               data_length_min="<?= $glo_lang['msg_min'] ?>"
+                               data_length_max="<?= $glo_lang['msg_max'] ?>"
+                               max="255"
+                               min="2"/>
                     </li>
                     <li>
                         <select data-rong="1" data-msso="<?= $glo_lang['chon_tinh_tp'] ?>" name="city" id="city" class="cityowner cls_data_check_form" >
@@ -124,7 +119,12 @@ $thongtin_step = LAY_anhstep_now(LAY_id_step(1));
                     <li>
                         <input type="hidden" name="s_message_s"
                                value="<?= base64_encode($glo_lang['noi_dung_lien_he']) ?>">
-                        <textarea class="field__input" name="s_message" id="s_message" cols="" rows=""
+                        <textarea class="field__input cls_data_check_form"
+                                  data_length_min="<?= $glo_lang['msg_min'] ?>"
+                                  data_length_max="<?= $glo_lang['msg_max'] ?>"
+                                  max="255"
+                                  min="2"
+                                  name="s_message" id="s_message" cols="" rows=""
                                   placeholder="<?= $glo_lang['noi_dung_lien_he'] ?>"><?= !empty($_POST['s_message']) ? $_POST['s_message'] : '' ?></textarea>
                         <div class="clr"></div>
                     </li>
@@ -248,7 +248,7 @@ $thongtin_step = LAY_anhstep_now(LAY_id_step(1));
                         </div>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="1" checked="" id="check_accept_payment">
+                        <input class="form-check-input cls_data_check_form"  type="checkbox" value="1" data-msso="<?= $glo_lang['dong_y_dieu_khoan '] ?>" checked="true" id="check_accept_payment">
                         <label class="form-check-label" for="flexCheckDefault">
                             <?= $glo_lang['dieu_khoan_website'] ?> <span style="color:red">*</span>
                         </label>
@@ -296,6 +296,7 @@ $thongtin_step = LAY_anhstep_now(LAY_id_step(1));
                 $(response).each(function (index, element) {
                     district.append("<option data-id='" + element.Id + "' value='" + element.Name + "'>" + element.Name + "</option>");
                 });
+                $("#district").trigger('change');
             },
             error: function (xhr, status, error) {
                 // Hàm callback nếu có lỗi

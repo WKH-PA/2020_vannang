@@ -1394,11 +1394,13 @@ if ($motty == 'dang-xuat') {
 }
 
 if ($motty == 'get-district') {
+    $_POST['province_id'] = !empty($_POST['province_id'])?$_POST['province_id']:0;
     echo json_encode(getDistrict($_POST['province_id']), 256);
     exit;
 }
 
 if ($motty == 'get-ward') {
+    $_POST['district_id'] = !empty($_POST['district_id'])?$_POST['district_id']:0;
     echo json_encode(getWard($_POST['district_id']), 256);
     exit;
 }

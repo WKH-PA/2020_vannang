@@ -427,19 +427,43 @@ function CHECK_send_lienhe(url, id_form, cls) {
             var place = $(this).attr('placeholder');
             var data_ms = $(this).attr('data-msso');
             var data_m1 = $(this).attr('data-msso1');
+            var data_length_min = $(this).attr('data_length_min');
+            var data_length_max = $(this).attr('data_length_max');
+            var min = parseInt($(this).attr('min'));
+            var max = parseInt($(this).attr('max'));
             var data_validate_name = $(this).attr('data-validate-name');
             var data_validate_name1 = $(this).attr('data-validate-name1');
-            console.log(phone);
-            console.log(val);
+            var checked = $(this).attr('checked');
             var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-            if (rong == 1 && (val == "" || val == place)) {
+            if (checked === "checked" && !$(cls).is(':checked')) {
                 if (data_ms != "") alert(data_ms);
                 $(this).focus();
                 $(".ajax_img_loading").hide();
                 check = 1;
                 icheck_lienhe = 0;
                 return false;
-            } else if (phone == 1 && val != "" && !CHECK_phone(cls)) {
+            } else if (val !== "" && val.length < min) {
+                if (data_length_min != "") alert(data_length_min);
+                $(this).focus();
+                $(".ajax_img_loading").hide();
+                check = 1;
+                icheck_lienhe = 0;
+                return false;
+            } else if (val !== "" && val.length > max) {
+                if (data_length_max != "") alert(data_length_max);
+                $(this).focus();
+                $(".ajax_img_loading").hide();
+                check = 1;
+                icheck_lienhe = 0;
+                return false;
+            } else if (rong == 1 && (val == "" || val == place)) {
+                if (data_ms != "") alert(data_ms);
+                $(this).focus();
+                $(".ajax_img_loading").hide();
+                check = 1;
+                icheck_lienhe = 0;
+                return false;
+            } else if (phone == 1 && val != "" && !CHECK_phone(val)) {
                 if (data_m1 != "") alert(data_m1);
                 $(this).focus();
                 $(".ajax_img_loading").hide();
@@ -606,32 +630,23 @@ function updateQty(url, id, obj) {
 
 function CHECK_phone(cls) {
     var flag = false;
-    var phone = $(cls).val().trim();
-
-    // Chuẩn hóa mã vùng và loại bỏ ký tự không cần thiết trong đầu chuỗi
+    var phone = cls;
     phone = phone.replace('(+84)', '0');
     phone = phone.replace('+84', '0');
-    phone = phone.replace('0084', '0');
-    phone = phone.replace(/ /g, ''); // Loại bỏ khoảng trắng
-
-
-    // Kiểm tra độ dài và định dạng
-    if (phone !== '') {
+    phone = phone.replace(/ /g, '');
+    if (phone != '') {
         var firstNumber = phone.substring(0, 2);
-
-        // Kiểm tra các điều kiện
-        if ((firstNumber === '09' || firstNumber === '08') && phone.length === 10) {
-            if (/^\d{10}$/.test(phone)) {
+        if ((firstNumber == '09' || firstNumber == '08') && phone.length == 10) {
+            if (phone.match(/^\d{10}/)) {
                 flag = true;
             }
-        } else if (firstNumber === '01' && phone.length === 11) {
-            if (/^\d{11}$/.test(phone)) {
+        } else if (firstNumber == '01' && phone.length == 11) {
+            if (phone.match(/^\d{11}/)) {
                 flag = true;
             }
         }
-
     }
-    console.log(flag);
+
     return flag;
 }
 
