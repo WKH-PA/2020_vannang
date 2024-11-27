@@ -248,7 +248,7 @@ $thongtin_step = LAY_anhstep_now(LAY_id_step(1));
                         </div>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input cls_data_check_form"  type="checkbox" value="1" data-msso="<?= $glo_lang['dong_y_dieu_khoan '] ?>" checked="true" id="check_accept_payment">
+                        <input class="form-check-input cls_data_check_form"  type="checkbox" value="1" data-msso="<?= $glo_lang['dong_y_dieu_khoan'] ?>" checked="true" id="check_accept_payment">
                         <label class="form-check-label" for="flexCheckDefault">
                             <?= $glo_lang['dieu_khoan_website'] ?> <span style="color:red">*</span>
                         </label>

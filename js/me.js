@@ -443,14 +443,14 @@ function CHECK_send_lienhe(url, id_form, cls) {
                 icheck_lienhe = 0;
                 return false;
             } else if (val !== "" && val.length < min) {
-                if (data_length_min != "") alert(data_length_min);
+                if (data_length_min != "") alert(data_length_min.replace("__MIN__",min));
                 $(this).focus();
                 $(".ajax_img_loading").hide();
                 check = 1;
                 icheck_lienhe = 0;
                 return false;
             } else if (val !== "" && val.length > max) {
-                if (data_length_max != "") alert(data_length_max);
+                if (data_length_max != "") alert(data_length_max.replace("__MAX__",min));
                 $(this).focus();
                 $(".ajax_img_loading").hide();
                 check = 1;
