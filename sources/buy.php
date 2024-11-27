@@ -92,7 +92,7 @@ $thongtin_step = LAY_anhstep_now(LAY_id_step(1));
                                data_length_min="<?= $glo_lang['msg_min'] ?>"
                                data_length_max="<?= $glo_lang['msg_max'] ?>"
                                max="255"
-                               min="2"/>
+                               min="3"/>
                     </li>
                     <li>
                         <select data-rong="1" data-msso="<?= $glo_lang['chon_tinh_tp'] ?>" name="city" id="city" class="cityowner cls_data_check_form" >
